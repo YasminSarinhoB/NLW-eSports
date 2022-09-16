@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ======= background ======= */
+
+body {
+    background-image: url(assets/bg.jpg);
+    background-color: #121214;
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+/* ======= main ======= */
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ======= text style ======== */
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+    color: #FFFFFF;
+}
+
+section p {
+    color: #A1A1A1;
+    letter-spacing: -0.18px;
+}
+
+/* ======= header ======= */
+
+header div {
+    width: 120px;
+    height: 120px;
+
+    padding: 4px;
+    margin: 32px auto;
+    
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+
+    transition: transform .25s;
+}
+
+header div:hover {
+    transform: scale(1.1)
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+/* ======= sections and ul ======= */
+
+section {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 13px;
+}
+
+section .container{
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+section ul {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+ul li {
+    transition: transform .25s;
+    opacity: .8;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* ======= images ======= */
+
+.games-list img {
+    width: 90px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.channels-list img {
+    border-radius: 50%;
+}
+
+/* ======= animation ======= */
+
+header div {
+    animation: fromTop .5s;
+    animation-delay: .2s;
+}
+
+main .left {
+    animation: fromLeft .5s;
+    animation-delay: .2s;
+
+}
+
+main .right {
+    animation: fromRight .5s;
+    animation-delay: .2s;
+
+}
+
+@keyframes fromTop {
+    0% {
+        opacity: .3;
+        transform: translateY(-15px)
+    }
+
+    100% { 
+        transform: translateY(0px)
+    }
+}
+
+@keyframes fromLeft {
+    0% {
+        opacity: .2;
+        transform: translateX(-50px);
+    }
+
+    50% {
+        opacity: .7;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromRight {
+    0% {
+        opacity: .2;
+        transform: translateX(50px);
+    }
+
+    50% {
+        opacity: .7;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
